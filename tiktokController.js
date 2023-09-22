@@ -31,10 +31,10 @@ exports.tiktok = async (email) => {
       (error, data, response) => {
         if (error) {
           console.error(error);
-          reject(error)
+          reject(error);
         } else {
           console.log("Succesfully sent to tiktok", data);
-          resolve(data)
+          resolve(data);
         }
       },
     );
