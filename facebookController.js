@@ -13,10 +13,10 @@ exports.facebook = async (email) => {
   const userData = new UserData().setEmails([email]);
 
   const serverEvent = new ServerEvent()
-    .setEventName("signup")
+    .setEventName("Purchase")
     .setEventTime(current_timestamp)
     .setUserData(userData)
-    .setEventSourceUrl("https://www.fanaverse.io/")
+    .setEventSourceUrl("https://www.fanaverse.app/")
     .setActionSource("website");
 
   const eventsData = [serverEvent];

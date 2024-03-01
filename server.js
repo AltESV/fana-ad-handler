@@ -25,8 +25,9 @@ app.post("/webhook", async (req, res) => {
     const facebookResponse = await facebookController.facebook(email);
     console.log("Facebook Response: ", facebookResponse);
 
-    const tiktokResponse = await tiktokController.tiktok(email);
-    console.log("Tiktok Response: ", tiktokResponse);
+    //post tiktok approval
+    // const tiktokResponse = await tiktokController.tiktok(email);
+    // console.log("Tiktok Response: ", tiktokResponse);
 
     res.status(200).json({
       status: "success",
