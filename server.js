@@ -3,7 +3,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 require("dotenv").config("");
 const facebookController = require("./facebookController");
-const tiktokController = require("./tiktokController");
 
 //INITIALIZE
 const app = express();
@@ -24,10 +23,6 @@ app.post("/webhook", async (req, res) => {
 
     const facebookResponse = await facebookController.facebook(email);
     console.log("Facebook Response: ", facebookResponse);
-
-    //post tiktok approval
-    // const tiktokResponse = await tiktokController.tiktok(email);
-    // console.log("Tiktok Response: ", tiktokResponse);
 
     res.status(200).json({
       status: "success",
