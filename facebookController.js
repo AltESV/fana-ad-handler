@@ -5,6 +5,7 @@ const EventRequest = bizSdk.EventRequest;
 const UserData = bizSdk.UserData;
 const ServerEvent = bizSdk.ServerEvent;
 const api = bizSdk.FacebookAdsApi.init(access_token);
+const CustomData = bizSdk.CustomData;
 
 //FORWARD EVENT TO FACEBOOK
 exports.facebook = async (email) => {
