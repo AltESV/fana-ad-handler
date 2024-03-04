@@ -17,7 +17,8 @@ exports.facebook = async (email) => {
     .setEventTime(current_timestamp)
     .setUserData(userData)
     .setEventSourceUrl("https://www.fanaverse.app/")
-    .setActionSource("website");
+    .setActionSource("website")
+    .setCustomData(new CustomData().setCurrency("GBP"));
 
   const eventsData = [serverEvent];
   const eventRequest = new EventRequest(access_token, pixel_id).setEvents(
